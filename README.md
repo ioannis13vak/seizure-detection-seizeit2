@@ -62,7 +62,7 @@ seizure-detection-seizeit2/
 ├── data/
 │   └── README.md             how to download SeizeIT2 (data are not included)
 ├── figures/                  figures produced by the notebook
-├── results/                  generated tables / checkpoints (created when the notebook runs)
+└── results/                  generated tables / checkpoints (created when the notebook runs)
 
 ```
 
