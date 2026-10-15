@@ -130,3 +130,25 @@ Run all cells from top to bottom. No manual steps are needed.
 * SeizeIT2 dataset: OpenNeuro **ds005873**, doi:[10.18112/openneuro.ds005873.v1.0.0](https://doi.org/10.18112/openneuro.ds005873.v1.0.0)
 * Bhagubai et al. (2025) – SeizeIT2 dataset and baseline seizure detection (alarm rule 8 of 10, 13–150 µV artifact rule).
 * Dan et al. (2024) – SzCORE: a framework for evaluating seizure detection algorithms; `timescoring` library.
+
+## Practical notes for a full run
+
+* **Dataset size.** The full SeizeIT2 dataset is about **120 GB**. Only the `eeg/` folders are used
+  (the `ecg/`, `emg/` and `mov/` folders are not needed).
+* **Disk and memory.** In addition to the raw data, about **15 GB** of free disk space is needed for the
+  extracted features (`processed_v3/` and `X_all.npy`), and about **4 GB of RAM**.
+* **Data in another folder.** If the data are not in `data/seizeit2/`, set the path in the same terminal
+  before starting Jupyter (replace the example path with your own):
+
+```bash
+  # Windows (PowerShell)
+  $env:SEIZEIT2_DATA = "C:\path\to\seizeit2"
+  # macOS / Linux
+  export SEIZEIT2_DATA=/path/to/seizeit2
+```
+
+  The quick test is switched on in the same way (`$env:QUICK_TEST = "1"` or `export QUICK_TEST=1`).
+* **Run time.** A full run takes several hours on a laptop; keep the computer from going to sleep.
+  If it stops, run the notebook again: finished patients and folds are skipped.
+* **Expected output.** A full run reproduces the results table above: **125 patients, 883 seizures,
+  494 detected (55.9 %) at 0.93 false alarms per hour**, train AUROC 0.969 and test AUROC 0.894.
