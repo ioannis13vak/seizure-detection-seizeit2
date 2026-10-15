@@ -1,0 +1,25 @@
+# raw data (download separately, see data/README.md)
+data/*
+!data/README.md
+
+# generated data and checkpoints (re-created by the notebook)
+processed_v3/
+results/*
+!results/README.md
+results_baseline/
+*.npz
+*.npy
+*.pkl
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
