@@ -63,8 +63,7 @@ seizure-detection-seizeit2/
 │   └── README.md             how to download SeizeIT2 (data are not included)
 ├── figures/                  figures produced by the notebook
 ├── results/                  generated tables / checkpoints (created when the notebook runs)
-└── presentation/
-    └── Seizure_Detection_SeizeIT2.pptx   final presentation
+
 ```
 
 Generated files (`processed_v3/`, `results/`, `figures/`) are kept separate from the raw data and the code.
