@@ -1,6 +1,6 @@
 # Data
 
-The raw data are **not included** in this repository (tens of GB).
+   The raw data are **not included** in this repository (the full dataset is about 120 GB).
 
 ## Dataset
 
