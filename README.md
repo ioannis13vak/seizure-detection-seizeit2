@@ -77,10 +77,15 @@ Generated files (`processed_v3/`, `results/`, `figures/`) are kept separate from
 * Install the packages:
 
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate      macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+   python -m venv .venv
+   # Windows (PowerShell): .\.venv\Scripts\Activate.ps1
+   # Windows (cmd):        .venv\Scripts\activate
+   # macOS / Linux:        source .venv/bin/activate
+   pip install -r requirements.txt
 ```
+
+   If PowerShell reports that running scripts is disabled, run
+   `Set-ExecutionPolicy -Scope Process Bypass` once in that terminal and activate again.
 
 ### 2. Data
 
